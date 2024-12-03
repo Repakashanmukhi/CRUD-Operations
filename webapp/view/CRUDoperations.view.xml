@@ -1,0 +1,53 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:table="sap.ui.table"
+    controllerName="odata.controller.CRUDoperations">
+    <Page id="page" title="Employee Details">
+        <content>
+            <Table id="employeeTable" items="{/EmployeeInfo}">
+                <headerToolbar>
+                    <Toolbar>
+                        <ToolbarSpacer />
+                        <Button text="Add" press="onAddNewRecord" />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Label text="ID" />
+                    </Column>
+                    <Column>
+                        <Label text="First Name" />
+                    </Column>
+                    <Column>
+                        <Label text="Last Name" />
+                    </Column>
+                    <Column>
+                        <Label text="Phone" />
+                    </Column>
+                    <Column>
+                        <Label text="Department" />
+                    </Column>
+                    <Column>
+                        <Label text="Position" />
+                    </Column>
+                    <Column>
+                        <Label text="Joining Date" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{ID}" />
+                            <Text text="{FirstName}" />
+                            <Text text="{LastName}" />
+                            <Text text="{Phone}" />
+                            <Text text="{Department}" />
+                            <Text text="{Position}" />
+                            <Text text="{JoiningDate}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
